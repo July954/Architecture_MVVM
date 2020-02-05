@@ -31,9 +31,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if #available(iOS 13.0, *) {
             window.overrideUserInterfaceStyle = .light
         }
-
-//        let vc = window.rootViewController as! ViewController
-//        vc.reactor = ViewModel()
         
         //Cordinator
         let appFlow = AppFlow(service: appServices)
@@ -43,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.makeKeyAndVisible()
         }
 
-        self.coordinator.coordinate(flow: appFlow)
+        self.coordinator.coordinate(flow: appFlow, with: AppStepper(withService: self.appServices))
         
         return true
     }

@@ -12,7 +12,8 @@ import RxFlow
 
 enum AppStep: Step {
     
-    //MARK: Main
     case goLogin
+    case goMain
+    
     
 }

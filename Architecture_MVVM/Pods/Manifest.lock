@@ -1,6 +1,11 @@
 PODS:
   - ReactorKit (2.0.1):
     - RxSwift (~> 5.0)
+  - Reusable (4.1.0):
+    - Reusable/Storyboard (= 4.1.0)
+    - Reusable/View (= 4.1.0)
+  - Reusable/Storyboard (4.1.0)
+  - Reusable/View (4.1.0)
   - RxCocoa (5.0.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -13,6 +18,7 @@ PODS:
 
 DEPENDENCIES:
   - ReactorKit
+  - Reusable
   - RxCocoa
   - RxFlow
   - RxRelay
@@ -21,6 +27,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - ReactorKit
+    - Reusable
     - RxCocoa
     - RxFlow
     - RxRelay
@@ -28,11 +35,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   ReactorKit: a63c5e11e0fd32d59d672e54178b0ed2876b764b
+  Reusable: 82be188f29d96dc5eff0db7b2393bcc08d2cdd5b
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
   RxFlow: 605ef6364d7e937bea8f9507a1e99a431cdc2493
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
 
-PODFILE CHECKSUM: feb8635ece1246eb1682f46b90e8f0d281c5ed49
+PODFILE CHECKSUM: 26f033b5c21b349bdf7acf39f63f519dd90864a3
 
 COCOAPODS: 1.8.4

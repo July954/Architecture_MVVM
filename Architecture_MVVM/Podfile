@@ -11,4 +11,5 @@ target 'Architecture_MVVM' do
  pod 'RxRelay'
  pod 'RxCocoa'
  pod 'ReactorKit'
+ pod 'Reusable'
 end

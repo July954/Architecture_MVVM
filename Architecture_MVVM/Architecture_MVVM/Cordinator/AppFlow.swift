@@ -37,30 +37,40 @@ class AppFlow: Flow {
         guard let step = step as? AppStep else {
             return .none
         }
-        
         switch step {
-        case .goLogin:
+        case .goMain:
             return naviToMain()
+        case .goLogin:
+            return naviToLogin()
         }
     }
     
-    private let sb = UIStoryboard(name: "Main", bundle: nil)
+    private func naviToLogin() -> FlowContributors {
+        let vc = LoginViewController.instantiate(withViewModel: LoginViewModel(), storyBoardName: "Login")
+        self.rootViewController.pushViewController(vc, animated: true)
+        return .one(flowContributor: FlowContributor.contribute(withNextPresentable: vc, withNextStepper: vc))
+    }
     
     private func naviToMain() -> FlowContributors {
-        var mainVC: UIViewController
-        if #available(iOS 13.0, *) {
-             mainVC = sb.instantiateViewController(identifier: "Main")
-        } else {
-            mainVC = sb.instantiateViewController(withIdentifier: "Main")
-        }
-        self.rootViewController.pushViewController(mainVC, animated: false)
-        
+        let vc = MainViewController.instantiate(withViewModel: MainViewModel(), storyBoardName: "Main")
+        self.rootViewController.pushViewController(vc, animated: true)
         return .none
     }
 }
 
 class AppStepper: Stepper {
-    var steps = PublishRelay<Step>()
+    let steps = PublishRelay<Step>()
+    
+    private let appServices: AppServices
+    private let disPoseBag = DisposeBag()
+    
+    var initialStep: Step {
+        return AppStep.goLogin
+    }
+    
+    init(withService service: AppServices) {
+        self.appServices = service
+    }
 
     
 }
