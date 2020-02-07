@@ -58,18 +58,22 @@ class LoginViewModel: Reactor {
     
     
     fileprivate func validationLogin() -> LoginViewModel.State {
-        if emailViewModel.validate() && passViewModel.validate() {
-            return State(result: .pass, messgae: "")
+        if !USER_VALUE().DEVLOP {
+            if emailViewModel.validate() && passViewModel.validate() {
+                return State(result: .pass, messgae: "")
+            } else {
+                if emailViewModel.errorValue.value != ""  {
+                    return State(result: .fail, messgae: emailViewModel.errorValue.value)
+                }
+                else if passViewModel.errorValue.value != ""  {
+                    return State(result: .fail, messgae: passViewModel.errorValue.value)
+                }
+                else {
+                    return State(result: .fail, messgae: "")
+                }
+            }
         } else {
-            if emailViewModel.errorValue.value != ""  {
-                return State(result: .fail, messgae: emailViewModel.errorValue.value)
-            }
-            else if passViewModel.errorValue.value != ""  {
-                return State(result: .fail, messgae: passViewModel.errorValue.value)
-            }
-            else {
-                return State(result: .fail, messgae: "")
-            }
+            return State(result: .pass, messgae: "")
         }
     }
     

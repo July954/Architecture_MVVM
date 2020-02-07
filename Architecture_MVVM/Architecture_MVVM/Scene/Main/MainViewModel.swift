@@ -10,42 +10,57 @@ import UIKit
 import ReactorKit
 import RxSwift
 import Reusable
+import Moya
 
 class MainViewModel: Reactor {
 
-    
     var initialState: MainViewModel.State = State()
+    
+    typealias MainServices = HasMainService
+    var mainServices: MainServices
     
     //Interaction With User
     enum Action {
-       
+        case getMarvelAPI
     }
     
     //Bridge of Action to State
     enum Mutation {
-        case normal
+        case resultMarvelAPI(Marvel.state)
     }
     
     //State of View
     struct State {
+        var marvelAPIState: Marvel.state = .loading
+    }
+    
+    init(withService services: MainServices) {
+        self.mainServices = services
+    }
+    
+    func mutate(action: MainViewModel.Action) -> Observable<MainViewModel.Mutation> {
+        switch action {
+        case .getMarvelAPI:
+            return self.mainServices.mainService.requestMarvelAPI()
+                .asObservable()
+                .map(Mutation.resultMarvelAPI)
+        }
+    }
+    
+    func reduce(state: State, mutation: Mutation) -> MainViewModel.State {
+        var newState = state
+        
+        switch mutation {
+        case .resultMarvelAPI(.error):
+            newState.marvelAPIState = .error
+            return newState
+        case .resultMarvelAPI(.loading):
+            newState.marvelAPIState = .loading
+            return newState
+        case .resultMarvelAPI(.ready(let result)):
+            newState.marvelAPIState = .ready(result)
+            return newState
+        }
         
     }
-    
-    init() {
-        self.initialState = State()
-    }
-    
-//    func mutate(action: LoginViewModel.Action) -> Observable<LoginViewModel.Mutation> {
-//        switch action {
-//        default :
-//            return
-//        }
-//    }
-//
-//    func reduce(state: State, mutation: Mutation) -> LoginViewModel.State {
-//        switch mutation {
-//        case .norma
-//            return .none
-//        }
-//    }
 }

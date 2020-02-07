@@ -125,7 +125,7 @@ class Utilty: Any {
     - Returns:
        숫자로만 이루어졌는지 여부
     */
-    func isNumber(string: String) ->Bool {
+    func isNumber(string: String) -> Bool {
         return !string.isEmpty && !(string.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) != nil)
     }
     
@@ -212,10 +212,9 @@ class Utilty: Any {
      }
 }
 
+//MARK: 공통시스템알럿
 class CommonAlert {
-    
     ////////////////////////// 공통 //////////////////////////
-    // MARK: - 뷰 컨트롤러 생명주기
     static var viewController: UIViewController? {
         if let navi = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
             return navi.viewControllers.first

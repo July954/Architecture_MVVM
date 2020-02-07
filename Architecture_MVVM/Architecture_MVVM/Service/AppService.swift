@@ -9,10 +9,10 @@
 import Foundation
 import RxSwift
 
-struct AppServices: HasAppService {
+struct AppServices: HasAppService, HasMainService{
     let appService: AppService
+    let mainService: MainService
 }
-
 
 protocol HasAppService {
     var appService: AppService { get }

@@ -52,9 +52,11 @@ class AppFlow: Flow {
     }
     
     private func naviToMain() -> FlowContributors {
-        let vc = MainViewController.instantiate(withViewModel: MainViewModel(), storyBoardName: "Main")
+        let vc = MainViewController.instantiate(withViewModel: MainViewModel(withService: service), storyBoardName: "Main")
+        
+        
         self.rootViewController.pushViewController(vc, animated: true)
-        return .none
+        return .one(flowContributor: FlowContributor.contribute(withNextPresentable: vc, withNextStepper: vc))
     }
 }
 

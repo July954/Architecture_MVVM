@@ -1,6 +1,16 @@
 PODS:
+  - Alamofire (4.9.1)
+  - Kingfisher (5.13.0):
+    - Kingfisher/Core (= 5.13.0)
+  - Kingfisher/Core (5.13.0)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
   - ReactorKit (2.0.1):
     - RxSwift (~> 5.0)
+  - Result (4.1.0)
   - Reusable (4.1.0):
     - Reusable/Storyboard (= 4.1.0)
     - Reusable/View (= 4.1.0)
@@ -15,32 +25,52 @@ PODS:
   - RxRelay (5.0.1):
     - RxSwift (~> 5)
   - RxSwift (5.0.1)
+  - RxViewController (1.0.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
+  - Kingfisher
+  - Moya
   - ReactorKit
   - Reusable
   - RxCocoa
   - RxFlow
   - RxRelay
   - RxSwift
+  - RxViewController
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
+    - Alamofire
+    - Kingfisher
+    - Moya
     - ReactorKit
+    - Result
     - Reusable
     - RxCocoa
     - RxFlow
     - RxRelay
     - RxSwift
+    - RxViewController
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Kingfisher: 0d334cada987fcddbe9b5cec516406e1ee9d4748
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   ReactorKit: a63c5e11e0fd32d59d672e54178b0ed2876b764b
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   Reusable: 82be188f29d96dc5eff0db7b2393bcc08d2cdd5b
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
   RxFlow: 605ef6364d7e937bea8f9507a1e99a431cdc2493
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
+  RxViewController: 7330a46e5c31cd680db169da4c9fc8676e975a81
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 26f033b5c21b349bdf7acf39f63f519dd90864a3
+PODFILE CHECKSUM: 6f171852083ac2ff238420e7d61f6e6fcba8e42f
 
 COCOAPODS: 1.8.4

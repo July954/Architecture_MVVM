@@ -10,6 +10,10 @@ target 'Architecture_MVVM' do
  pod 'RxSwift'
  pod 'RxRelay'
  pod 'RxCocoa'
+ pod 'RxViewController'
  pod 'ReactorKit'
  pod 'Reusable'
+ pod 'Moya'
+ pod 'SwiftyJSON'
+ pod 'Kingfisher'
 end

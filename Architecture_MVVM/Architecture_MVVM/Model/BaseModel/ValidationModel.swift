@@ -27,5 +27,10 @@ protocol ValidationModel {
 struct USER_VALUE {
     let USER_EMAIL = "shan@shan.com"
     let USER_PW    = "shan1234"
+    
+    
+    ///// 개발시에는 로그인 넘어가기
+    let DEVLOP = true
+//    let DEVLOP = false
 }
   

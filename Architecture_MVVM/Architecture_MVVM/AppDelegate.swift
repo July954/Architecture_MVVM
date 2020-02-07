@@ -18,8 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var coordinator = FlowCoordinator()
     
     let appService = AppService()
+    let mainService = MainService()
     lazy var appServices = {
-        return AppServices(appService: self.appService)
+        return AppServices(appService: self.appService, mainService:  self.mainService)
     }()
 
     
