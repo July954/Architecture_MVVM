@@ -21,7 +21,7 @@ class MainTableViewCell: UITableViewCell {
       lblDesc.text = comic.description ?? "No description available"
 
       imgThumb.kf.setImage(with: comic.thumbnail.url,
-                           options: [.transition(.fade(0.2))])
+                           options: [.transition(.fade(0.05))])
     }
 
     override func awakeFromNib() {

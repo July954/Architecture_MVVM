@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		685D7A3B0DFB95868716A3C4 /* Pods_Architecture_MVVM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B3FD83512797675F4CBBF30 /* Pods_Architecture_MVVM.framework */; };
+		E5732D9923F13B9F000C66E8 /* APILoggingPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5732D9823F13B9F000C66E8 /* APILoggingPlugin.swift */; };
 		E5743F0323ECFCCF00D8AAB6 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5743F0223ECFCCF00D8AAB6 /* MainTableViewCell.swift */; };
+		E5743F0D23ED447800D8AAB6 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5743F0C23ED447700D8AAB6 /* Utility.swift */; };
 		E574F02723EA5FA700DE3414 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574F02623EA5FA700DE3414 /* BaseVC.swift */; };
 		E574F02C23EA860500DE3414 /* ValidationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574F02B23EA860500DE3414 /* ValidationModel.swift */; };
 		E574F02F23EA86A600DE3414 /* EmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574F02E23EA86A600DE3414 /* EmailViewModel.swift */; };
 		E574F03123EA8A2300DE3414 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574F03023EA8A2300DE3414 /* PasswordViewModel.swift */; };
-		E574F03323EA9E5F00DE3414 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574F03223EA9E5F00DE3414 /* Utility.swift */; };
 		E574F03623EAA09600DE3414 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574F03523EAA09600DE3414 /* MainViewController.swift */; };
 		E574F03823EAA0B100DE3414 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574F03723EAA0B100DE3414 /* MainViewModel.swift */; };
 		E574F03A23EAA0DC00DE3414 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E574F03923EAA0DC00DE3414 /* Main.storyboard */; };
@@ -26,12 +27,9 @@
 		E57A856623E95222007A4599 /* AppStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57A856523E95222007A4599 /* AppStep.swift */; };
 		E57A856923E95232007A4599 /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57A856823E95232007A4599 /* AppFlow.swift */; };
 		E57A856E23E9630C007A4599 /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57A856D23E9630C007A4599 /* AppService.swift */; };
-		E5E513AE23EBA00B00F0E1E1 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E513AD23EBA00B00F0E1E1 /* Extension.swift */; };
 		E5E513B123EBA0DC00F0E1E1 /* MarvelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E513B023EBA0DC00F0E1E1 /* MarvelModel.swift */; };
-		E5E513B323EBACFE00F0E1E1 /* CodableResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E513B223EBACFE00F0E1E1 /* CodableResponse.swift */; };
 		E5E513B523EBADFA00F0E1E1 /* ComicsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E513B423EBADFA00F0E1E1 /* ComicsModel.swift */; };
 		E5E513B723EBCB0A00F0E1E1 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E513B623EBCB0A00F0E1E1 /* MainService.swift */; };
-		E5E513BB23EBD83C00F0E1E1 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E513BA23EBD83C00F0E1E1 /* Networking.swift */; };
 		E5E513C323EBE42100F0E1E1 /* Observable+Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E513BD23EBE42100F0E1E1 /* Observable+Response.swift */; };
 		E5E513C423EBE42100F0E1E1 /* MoyaProvider+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E513BE23EBE42100F0E1E1 /* MoyaProvider+Rx.swift */; };
 		E5E513C523EBE42100F0E1E1 /* ALSwiftyJSONAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E513BF23EBE42100F0E1E1 /* ALSwiftyJSONAble.swift */; };
@@ -44,12 +42,13 @@
 		8312044D3D47DF658F3332AD /* Pods-Architecture_MVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture_MVVM.release.xcconfig"; path = "Target Support Files/Pods-Architecture_MVVM/Pods-Architecture_MVVM.release.xcconfig"; sourceTree = "<group>"; };
 		9B3FD83512797675F4CBBF30 /* Pods_Architecture_MVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Architecture_MVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC476773B892AC2ABAF9D735 /* Pods-Architecture_MVVM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Architecture_MVVM.debug.xcconfig"; path = "Target Support Files/Pods-Architecture_MVVM/Pods-Architecture_MVVM.debug.xcconfig"; sourceTree = "<group>"; };
+		E5732D9823F13B9F000C66E8 /* APILoggingPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APILoggingPlugin.swift; sourceTree = "<group>"; };
 		E5743F0223ECFCCF00D8AAB6 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		E5743F0C23ED447700D8AAB6 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		E574F02623EA5FA700DE3414 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		E574F02B23EA860500DE3414 /* ValidationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationModel.swift; sourceTree = "<group>"; };
 		E574F02E23EA86A600DE3414 /* EmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModel.swift; sourceTree = "<group>"; };
 		E574F03023EA8A2300DE3414 /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
-		E574F03223EA9E5F00DE3414 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		E574F03523EAA09600DE3414 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E574F03723EAA0B100DE3414 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		E574F03923EAA0DC00DE3414 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -64,12 +63,9 @@
 		E57A856523E95222007A4599 /* AppStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStep.swift; sourceTree = "<group>"; };
 		E57A856823E95232007A4599 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		E57A856D23E9630C007A4599 /* AppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
-		E5E513AD23EBA00B00F0E1E1 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		E5E513B023EBA0DC00F0E1E1 /* MarvelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelModel.swift; sourceTree = "<group>"; };
-		E5E513B223EBACFE00F0E1E1 /* CodableResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableResponse.swift; sourceTree = "<group>"; };
 		E5E513B423EBADFA00F0E1E1 /* ComicsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsModel.swift; sourceTree = "<group>"; };
 		E5E513B623EBCB0A00F0E1E1 /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
-		E5E513BA23EBD83C00F0E1E1 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		E5E513BD23EBE42100F0E1E1 /* Observable+Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Observable+Response.swift"; sourceTree = "<group>"; };
 		E5E513BE23EBE42100F0E1E1 /* MoyaProvider+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MoyaProvider+Rx.swift"; sourceTree = "<group>"; };
 		E5E513BF23EBE42100F0E1E1 /* ALSwiftyJSONAble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALSwiftyJSONAble.swift; sourceTree = "<group>"; };
@@ -211,10 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				E5E513BC23EBE42100F0E1E1 /* Moya */,
-				E574F03223EA9E5F00DE3414 /* Utility.swift */,
-				E5E513AD23EBA00B00F0E1E1 /* Extension.swift */,
-				E5E513B223EBACFE00F0E1E1 /* CodableResponse.swift */,
-				E5E513BA23EBD83C00F0E1E1 /* Networking.swift */,
+				E5743F0C23ED447700D8AAB6 /* Utility.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -232,6 +225,7 @@
 		E5E513BC23EBE42100F0E1E1 /* Moya */ = {
 			isa = PBXGroup;
 			children = (
+				E5732D9823F13B9F000C66E8 /* APILoggingPlugin.swift */,
 				E5E513BD23EBE42100F0E1E1 /* Observable+Response.swift */,
 				E5E513BE23EBE42100F0E1E1 /* MoyaProvider+Rx.swift */,
 				E5E513BF23EBE42100F0E1E1 /* ALSwiftyJSONAble.swift */,
@@ -368,26 +362,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5743F0323ECFCCF00D8AAB6 /* MainTableViewCell.swift in Sources */,
-				E5E513BB23EBD83C00F0E1E1 /* Networking.swift in Sources */,
+				E5732D9923F13B9F000C66E8 /* APILoggingPlugin.swift in Sources */,
 				E57A855123E94B9B007A4599 /* LoginViewController.swift in Sources */,
 				E5E513C623EBE42100F0E1E1 /* Response+SwiftyJSONMapper.swift in Sources */,
 				E57A856E23E9630C007A4599 /* AppService.swift in Sources */,
 				E57A856623E95222007A4599 /* AppStep.swift in Sources */,
 				E574F03623EAA09600DE3414 /* MainViewController.swift in Sources */,
-				E574F03323EA9E5F00DE3414 /* Utility.swift in Sources */,
 				E574F03823EAA0B100DE3414 /* MainViewModel.swift in Sources */,
 				E57A856323E94DF0007A4599 /* LoginViewModel.swift in Sources */,
 				E5E513B523EBADFA00F0E1E1 /* ComicsModel.swift in Sources */,
 				E574F02F23EA86A600DE3414 /* EmailViewModel.swift in Sources */,
 				E574F02C23EA860500DE3414 /* ValidationModel.swift in Sources */,
 				E5E513C723EBE42100F0E1E1 /* Single+Response.swift in Sources */,
-				E5E513B323EBACFE00F0E1E1 /* CodableResponse.swift in Sources */,
 				E5E513B123EBA0DC00F0E1E1 /* MarvelModel.swift in Sources */,
-				E5E513AE23EBA00B00F0E1E1 /* Extension.swift in Sources */,
 				E5E513C823EBE42100F0E1E1 /* PrimitiveSequence+SwiftyJSONMapper.swift in Sources */,
 				E57A856923E95232007A4599 /* AppFlow.swift in Sources */,
 				E5E513C323EBE42100F0E1E1 /* Observable+Response.swift in Sources */,
 				E5E513B723EBCB0A00F0E1E1 /* MainService.swift in Sources */,
+				E5743F0D23ED447800D8AAB6 /* Utility.swift in Sources */,
 				E574F02723EA5FA700DE3414 /* BaseVC.swift in Sources */,
 				E57A854D23E94B9B007A4599 /* AppDelegate.swift in Sources */,
 				E5E513C423EBE42100F0E1E1 /* MoyaProvider+Rx.swift in Sources */,

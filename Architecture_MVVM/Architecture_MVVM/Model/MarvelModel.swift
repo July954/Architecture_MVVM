@@ -76,7 +76,6 @@ extension Marvel: TargetType {
             "hash"   : hash
         ]
         
-        
         switch self {
         case .comics:
             return [
@@ -84,7 +83,7 @@ extension Marvel: TargetType {
                 "formatType" : "comic",
                 "orderBy" : "-onsaleDate",
                 "dateDescriptor" : "lastWeek",
-                "limit" : String(50)].merging(authParam) { $1 }
+                "limit" : 50].merging(authParam) { $1 }
         }
     }
     
@@ -95,4 +94,16 @@ extension Marvel: TargetType {
     public var validationType: ValidationType {
         return .successCodes
     }
+}
+
+struct MarvelResponse<T: Codable>: Codable {
+    let data: MarvelResults<T>
+}
+
+struct MarvelResults<T: Codable>: Codable {
+  let results: [T]
+}
+
+struct ImgurResponse<T: Codable>: Codable {
+  let data: T
 }

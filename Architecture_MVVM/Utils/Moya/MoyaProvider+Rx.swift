@@ -4,6 +4,29 @@ import Moya
 
 extension MoyaProvider: ReactiveCompatible {}
 
+class ArcProvider<T: TargetType>: MoyaProvider<T> {
+    init(stubClosure: @escaping StubClosure = MoyaProvider.neverStub) {
+        let networkClosure = { (_ change: NetworkActivityChangeType, _ target: TargetType) in
+            switch change {
+            default:
+                break
+            }
+        }
+        
+        let configuration = URLSessionConfiguration.default
+        configuration.httpAdditionalHeaders = Manager.defaultHTTPHeaders
+        
+        //
+        let manager = Manager(configuration: configuration)
+        manager.startRequestsImmediately = false
+        
+        super.init(stubClosure: stubClosure,
+                   manager: manager,
+                   plugins: [APILoggingPlugin(),
+                             NetworkActivityPlugin(networkActivityClosure: networkClosure)])
+    }
+}
+
 public extension Reactive where Base: MoyaProviderType {
 
     /// Designated request-making method.

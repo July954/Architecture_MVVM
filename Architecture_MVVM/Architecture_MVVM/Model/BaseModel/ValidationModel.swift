@@ -30,7 +30,7 @@ struct USER_VALUE {
     
     
     ///// 개발시에는 로그인 넘어가기
-    let DEVLOP = true
-//    let DEVLOP = false
+//    let DEVLOP = true
+    let DEVLOP = false
 }
   

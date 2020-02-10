@@ -17,13 +17,13 @@ protocol HasMainService {
 }
 
 class MainService {
-    
-//    private let provider = Networking<Marvel>()
-    private let provider = MoyaProvider<Marvel>()
-    
+   
+    private var provider = ArcProvider<Marvel>()
     func requestMarvelAPI() -> Single<Marvel.state> {
         
+        
         return Single<Marvel.state>.create { (single) -> Disposable in
+            
             self.provider.request(.comics) { (result) in
                 
                 switch result {
