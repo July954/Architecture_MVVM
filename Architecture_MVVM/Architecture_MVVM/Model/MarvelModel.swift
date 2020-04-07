@@ -82,7 +82,6 @@ extension Marvel: TargetType {
                 "format" : "comic",
                 "formatType" : "comic",
                 "orderBy" : "-onsaleDate",
-                "dateDescriptor" : "lastWeek",
                 "limit" : 50].merging(authParam) { $1 }
         }
     }

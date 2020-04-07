@@ -43,7 +43,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A comics description of long long long long long long long long long long proportions." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhY-U2-Btn">
-                                                    <rect key="frame" x="101" y="34.5" width="297" height="61"/>
+                                                    <rect key="frame" x="101" y="34.5" width="297" height="75.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -52,6 +52,7 @@
                                             <constraints>
                                                 <constraint firstItem="MhY-U2-Btn" firstAttribute="top" secondItem="BtJ-3y-HUb" secondAttribute="bottom" id="Mdh-8X-tg5"/>
                                                 <constraint firstItem="GA0-gu-kbv" firstAttribute="leading" secondItem="xeD-sI-TYZ" secondAttribute="leading" constant="16" id="QG5-Ae-MLW"/>
+                                                <constraint firstAttribute="bottom" secondItem="MhY-U2-Btn" secondAttribute="bottom" constant="10" id="alI-jV-36o"/>
                                                 <constraint firstItem="BtJ-3y-HUb" firstAttribute="top" secondItem="GA0-gu-kbv" secondAttribute="top" id="eRA-Wd-L65"/>
                                                 <constraint firstItem="BtJ-3y-HUb" firstAttribute="leading" secondItem="GA0-gu-kbv" secondAttribute="trailing" constant="8" id="j2H-gd-3co"/>
                                                 <constraint firstAttribute="bottom" secondItem="GA0-gu-kbv" secondAttribute="bottom" constant="8" id="k6J-YG-JL6"/>

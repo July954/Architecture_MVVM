@@ -25,7 +25,6 @@ class MainService {
         return Single<Marvel.state>.create { (single) -> Disposable in
             
             self.provider.request(.comics) { (result) in
-                
                 switch result {
                 case .success(let response):
                     do {
